@@ -26,4 +26,3 @@ end
 def pow(val,n)
 		if( n == 1) then return val else return pow(val,n-1)*val end	
 end
-
