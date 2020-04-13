@@ -38,8 +38,8 @@ def array_42(array)
 end
 
 def magic_array (array)
-	
-	if( array.flatten! != nil) then array=array.flatten! end 
+	tmp = array.dup
+	if( tmp.flatten! != nil) then array.flatten! end 
 	array = array.map{|i| if(i%3==0)then i=-1 else i*=2 end}.sort
 	array.delete(-1)
 	return array.uniq
